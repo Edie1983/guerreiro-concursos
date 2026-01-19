@@ -1,0 +1,44 @@
+@keyframes shimmer {
+  0% { background-position: -468px 0; }
+  100% { background-position: 468px 0; }
+}
+
+.skeleton-card {
+  background-color: var(--surface-dark);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.skeleton-line {
+  background: #2e3a46;
+  background-image: linear-gradient(to right, #2e3a46 0%, #394856 20%, #2e3a46 40%, #2e3a46 100%);
+  background-repeat: no-repeat;
+  background-size: 800px 104px;
+  animation: shimmer 1s linear infinite;
+  border-radius: 4px;
+  height: 16px;
+  margin-bottom: 12px;
+}
+
+.skeleton-title {
+  width: 60%;
+  height: 24px;
+}
+
+.skeleton-text {
+  width: 90%;
+}
+
+.skeleton-text.short {
+  width: 75%;
+}
+
+.skeleton-badge {
+  width: 30%;
+  height: 28px;
+  border-radius: 20px;
+  margin-top: 1rem;
+  background: #2e3a46;
+  background-image: linear-gradient(to right, #2e3a46 0%, #394856 20%, #2e3a46 40%, #2e3a46 100%);
+}

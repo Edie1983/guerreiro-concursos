@@ -1,0 +1,129 @@
+/* src/pages/Profile/style.css */
+.gc-profile-page {
+  min-height: 100vh;
+  background: transparent;
+  padding-bottom: 2rem;
+}
+
+.gc-profile-card {
+  margin: 0;
+  padding: 1.5rem;
+}
+
+.gc-profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.gc-profile-avatar-wrapper {
+  position: relative;
+}
+
+.gc-profile-avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--gc-primary);
+  box-shadow: 0 0 20px rgba(56, 182, 255, 0.3);
+}
+
+.gc-profile-info {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.gc-profile-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--gc-text-strong);
+}
+
+.gc-profile-email {
+  font-size: 0.9rem;
+  color: var(--gc-text-muted);
+}
+
+.gc-profile-badge {
+  margin-top: 0.5rem;
+}
+
+.gc-profile-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.gc-profile-detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: var(--gc-card-bg);
+  border: var(--gc-card-border);
+  border-radius: var(--gc-card-radius);
+}
+
+.gc-profile-detail-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--gc-text-muted);
+}
+
+.gc-profile-detail-value {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--gc-text-strong);
+}
+
+.gc-profile-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.gc-profile-action-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  font-weight: 700;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.gc-btn-secondary {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--gc-text-strong);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gc-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(56, 182, 255, 0.3);
+}
+
+.gc-btn-danger {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.gc-btn-danger:hover {
+  background: rgba(239, 68, 68, 0.15);
+  border-color: rgba(239, 68, 68, 0.3);
+}

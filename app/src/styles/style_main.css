@@ -1,0 +1,36 @@
+/* =========================
+   FUNDO GLOBAL
+   ========================= */
+html, body {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(56,182,255,0.04) 0%,
+      rgba(11,15,23,0.0) 40%
+    ),
+    #0b0f17 !important;
+}
+
+/* =========================
+   TOPBAR — MATAR ROXO
+   ========================= */
+.gc-topbar,
+header {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(20,50,80,0.9),
+      rgba(11,15,23,0.85)
+    ) !important;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35) !important;
+  border-bottom: 1px solid rgba(56,182,255,0.12) !important;
+}
+
+/* =========================
+   CHIPS ATIVOS (mantido apenas para botões com aria-pressed)
+   ========================= */
+button[aria-pressed="true"] {
+  box-shadow:
+    0 0 0 1px rgba(56,182,255,0.25),
+    0 0 18px rgba(56,182,255,0.45) !important;
+}

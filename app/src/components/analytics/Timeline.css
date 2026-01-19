@@ -1,0 +1,128 @@
+/* src/components/analytics/Timeline.css */
+.gc-timeline {
+  background: var(--surface-dark, #1e1e2e);
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.gc-timeline-header {
+  margin-bottom: 24px;
+}
+
+.gc-timeline-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.gc-timeline-subtitle {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.gc-timeline-events {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.gc-timeline-event {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  position: relative;
+  padding-left: 8px;
+}
+
+.gc-timeline-event::before {
+  content: '';
+  position: absolute;
+  left: 23px;
+  top: 32px;
+  bottom: -16px;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.gc-timeline-event:last-child::before {
+  display: none;
+}
+
+.gc-timeline-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.gc-timeline-created .gc-timeline-icon {
+  background: rgba(99, 102, 241, 0.2);
+  color: #6366f1;
+}
+
+.gc-timeline-edital .gc-timeline-icon {
+  background: rgba(34, 197, 94, 0.2);
+  color: #22c55e;
+}
+
+.gc-timeline-disciplina .gc-timeline-icon {
+  background: rgba(59, 130, 246, 0.2);
+  color: #3b82f6;
+}
+
+.gc-timeline-cronograma .gc-timeline-icon {
+  background: rgba(251, 191, 36, 0.2);
+  color: #fbbf24;
+}
+
+.gc-timeline-content {
+  flex: 1;
+  padding-top: 4px;
+}
+
+.gc-timeline-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.gc-timeline-description {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 8px;
+}
+
+.gc-timeline-date {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.gc-timeline-empty {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.gc-timeline-empty-text {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 8px;
+}
+
+.gc-timeline-empty-hint {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+
+
+
+
+

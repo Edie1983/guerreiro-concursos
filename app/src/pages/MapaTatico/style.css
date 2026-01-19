@@ -1,0 +1,202 @@
+/* src/pages/MapaTatico/style.css */
+
+.gc-metodo-peso-badge {
+  margin-bottom: 20px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  background: var(--gc-card-bg);
+  border: var(--gc-card-border);
+  border-radius: 12px;
+}
+
+.gc-metodo-peso-label {
+  font-size: 13px;
+  color: var(--gc-text-muted);
+  font-weight: 600;
+}
+
+.gc-metodo-peso-value {
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.gc-metodo-questoes {
+  background: rgba(56, 182, 255, 0.15);
+  color: var(--gc-primary);
+  border: 1px solid rgba(56, 182, 255, 0.3);
+}
+
+.gc-metodo-chars {
+  background: rgba(139, 92, 246, 0.15);
+  color: #8b5cf6;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.gc-metodo-peso-aviso {
+  font-size: 11px;
+  color: var(--gc-text-dim);
+  font-style: italic;
+  margin-left: auto;
+}
+
+.gc-mapa-tatico-card {
+  margin-top: 20px;
+  background: var(--gc-card-bg);
+  border: var(--gc-card-border);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: var(--gc-card-shadow);
+}
+
+.gc-mapa-tatico-table {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-radius: var(--gc-card-radius);
+  overflow: hidden;
+  border: var(--gc-card-border);
+  background: var(--gc-card-bg);
+}
+
+.gc-mapa-tatico-table-header {
+  display: grid;
+  grid-template-columns: 2fr 0.8fr 1fr 1fr 1fr 1fr 1.2fr;
+  gap: 16px;
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--gc-text-muted);
+}
+
+.gc-mapa-tatico-table-header:has(.gc-mapa-tatico-cell-secundario) {
+  grid-template-columns: 2fr 0.8fr 1fr 1fr 1fr 1fr 1fr 1fr 1.2fr;
+}
+
+.gc-mapa-tatico-table-row {
+  display: grid;
+  grid-template-columns: 2fr 0.8fr 1fr 1fr 1fr 1fr 1.2fr;
+  gap: 16px;
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: background 0.2s ease;
+}
+
+.gc-mapa-tatico-table-row:has(.gc-mapa-tatico-cell-secundario) {
+  grid-template-columns: 2fr 0.8fr 1fr 1fr 1fr 1fr 1fr 1fr 1.2fr;
+}
+
+.gc-mapa-tatico-table-row:last-child {
+  border-bottom: none;
+}
+
+.gc-mapa-tatico-table-row:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.gc-mapa-tatico-cell {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: var(--gc-text);
+}
+
+.gc-mapa-tatico-cell-disciplina {
+  font-weight: 600;
+  color: var(--gc-text-strong);
+}
+
+.gc-mapa-tatico-cell-numerico {
+  font-family: "SF Mono", "Monaco", "Inconsolata", "Fira Code", monospace;
+  font-size: 13px;
+  color: var(--gc-text-muted);
+  justify-content: flex-end;
+}
+
+.gc-mapa-tatico-cell-secundario {
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+.gc-mapa-tatico-cell-prioridade {
+  justify-content: flex-end;
+}
+
+.gc-prioridade-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.gc-prioridade-alta {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.gc-prioridade-media {
+  background: rgba(251, 191, 36, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(251, 191, 36, 0.3);
+}
+
+.gc-prioridade-baixa {
+  background: rgba(48, 232, 138, 0.15);
+  color: #30E88A;
+  border: 1px solid rgba(48, 232, 138, 0.3);
+}
+
+.gc-rank-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: rgba(56, 182, 255, 0.15);
+  color: var(--gc-primary);
+  border: 1px solid rgba(56, 182, 255, 0.3);
+  font-size: 12px;
+  font-weight: 700;
+  font-family: "SF Mono", "Monaco", "Inconsolata", "Fira Code", monospace;
+}
+
+.gc-mapa-tatico-cell-rank {
+  justify-content: center;
+}
+
+.gc-validacao-aviso {
+  color: #fbbf24;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .gc-mapa-tatico-table-header,
+  .gc-mapa-tatico-table-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .gc-mapa-tatico-cell-numerico {
+    justify-content: flex-start;
+  }
+
+  .gc-mapa-tatico-cell-prioridade {
+    justify-content: flex-start;
+  }
+}

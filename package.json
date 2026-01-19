@@ -1,0 +1,27 @@
+{
+  "name": "myapp",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "build:landing": "mkdir -p public/landing-assets && cp landing/index.html public/ && cp landing/style.css public/landing-assets/ && cp -r landing/assets/* public/landing-assets/",
+    "build:app": "cd app && npm install && npm run build",
+    "build": "rm -rf public/* && npm run build:landing && npm run build:app"
+  },
+  "dependencies": {
+    "firebase": "^12.7.0",
+    "pdfjs-dist": "^5.4.530",
+    "preact": "^10.28.1",
+    "preact-feather": "^4.2.1",
+    "preact-router": "^4.1.2",
+    "zustand": "^5.0.9"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.10.2",
+    "@types/node": "^24.10.1",
+    "@vitejs/plugin-react": "^5.1.2",
+    "sharp": "^0.34.5",
+    "typescript": "~5.9.3",
+    "vite": "^7.2.4"
+  }
+}

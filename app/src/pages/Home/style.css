@@ -1,0 +1,280 @@
+/* src/pages/Home/style.css */
+
+.gc-home {
+  min-height: 100vh;
+  padding: 18px;
+  padding-bottom: 90px;
+}
+
+/* Cleanup: Remove unused old banner styles (gc-premium-banner, gc-upgrade-cta-banner) as they are replaced by component */
+
+.gc-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.gc-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--surface-dark); /* Fallback */
+  background: rgba(18, 20, 28, 0.6);
+  border: 1px solid rgba(56,182,255,0.12);
+  border-radius: 12px; /* Standard radius */
+  padding: 10px 12px;
+  transition: box-shadow 0.2s;
+}
+
+.gc-search:focus-within {
+  box-shadow: var(--gc-neon-soft);
+  border-color: rgba(56, 182, 255, 0.5);
+}
+
+.gc-search input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--gc-text);
+  font-size: 14px;
+}
+
+.gc-chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.03);
+  color: var(--gc-text-muted);
+  border-radius: 999px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.2s;
+}
+
+.chip:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.chip.active {
+  background: rgba(56, 182, 255, 0.15);
+  color: #fff;
+  border-color: rgba(56, 182, 255, 0.35);
+  box-shadow: var(--gc-neon-soft);
+}
+
+.gc-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.gc-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+@media (min-width: 768px) {
+  .gc-grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* .stat uses .card-premium from layout.css */
+.stat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.stat-label {
+  color: var(--gc-text-muted);
+  font-size: 13px;
+}
+
+.stat-value {
+  margin-top: 6px;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--gc-text-strong);
+}
+
+.gc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.gc-list li {
+  font-size: 14px;
+  color: var(--gc-text-muted);
+  padding: 6px 0;
+  line-height: 1.5;
+}
+
+/* .gc-edital uses .card-premium from layout.css */
+.gc-edital {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.gc-edital-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.gc-edital-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--gc-text-strong);
+}
+
+.gc-tag {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.10);
+  color: var(--gc-text-muted);
+}
+
+.gc-tag.completed {
+  border-color: rgba(48,232,138,0.35);
+  background: rgba(48,232,138,0.12);
+  color: #fff;
+}
+
+.gc-edital-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.gc-edital-info {
+  font-size: 13px;
+  color: var(--gc-text-muted);
+}
+
+.empty {
+  padding: 16px;
+  color: var(--gc-text-muted);
+  text-align: center;
+  border: 1px dashed rgba(255,255,255,0.1);
+  border-radius: 12px;
+}
+
+.gc-fab {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 56px;
+  height: 56px;
+  border: none;
+  border-radius: 999px;
+  background: var(--gc-primary);
+  color: #00131b;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(56, 182, 255, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.gc-fab:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(56, 182, 255, 0.6);
+}
+
+.gc-fab:active {
+  transform: scale(0.95);
+}
+
+.gc-btn-primary {
+  padding: 10px 16px;
+  background: var(--gc-primary);
+  color: #00131b;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.gc-btn-primary:hover:not(:disabled) {
+  filter: brightness(1.1);
+  box-shadow: 0 0 20px rgba(56, 182, 255, 0.4);
+}
+
+.gc-btn-primary:disabled {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--gc-text-dim);
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.gc-btn-disabled {
+  padding: 10px 16px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--gc-text-dim);
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: not-allowed;
+  opacity: 0.5;
+  width: 100%;
+}
+
+.gc-card-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--gc-text-strong);
+  margin: 0 0 12px 0;
+}
+
+.gc-price {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--gc-text-strong);
+  margin: 16px 0;
+}
+
+.gc-badge {
+  display: inline-block;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(56, 182, 255, 0.35);
+  background: rgba(56, 182, 255, 0.15);
+  color: var(--gc-primary);
+  margin-bottom: 12px;
+}
+
+.gc-badge.green {
+  border-color: rgba(48, 232, 138, 0.35);
+  background: rgba(48, 232, 138, 0.15);
+  color: #fff;
+}
+
+.gc-highlight {
+  border-color: rgba(56, 182, 255, 0.3);
+  box-shadow: 0 0 24px rgba(56, 182, 255, 0.2);
+}

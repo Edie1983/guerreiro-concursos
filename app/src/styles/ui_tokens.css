@@ -1,0 +1,53 @@
+:root {
+  /* Windows 11 UI Tokens / Linear.app Clean Minimal UI */
+  --primary: #38b6ff;
+  --primary-glow: rgba(56, 182, 255, 0.33);
+  --bg-dark: #0d1117;
+  --surface: rgba(255, 255, 255, 0.06);
+  --surface-hover: rgba(255, 255, 255, 0.1);
+  
+  /* Glassmorphism REAL: backdrop-filter: blur(28px) */
+  --glass-bg: rgba(18, 20, 28, 0.55);
+  --glass-blur: blur(28px);
+  --glass-border: 1px solid rgba(56, 182, 255, 0.25);
+  --card-border: 1px solid rgba(255, 255, 255, 0.08);
+  
+  /* Layout Dimensions */
+  --sidebar-mini: 72px;
+  --sidebar-expanded: 240px;
+  --topbar-height: 64px;
+  
+  /* Typography */
+  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+  
+  /* Transitions & Animations */
+  --transition-smooth: 220ms cubic-bezier(.4, 0, .2, 1);
+  --shadow-premium: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+@keyframes slideFade {
+  0% {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

@@ -1,0 +1,227 @@
+/* src/components/dev/PanelStripePremiumTest.css */
+/* Painel Visual de Teste Stripe Premium (DEV-only) */
+
+.gc-panel-stripe-test {
+  padding: 20px;
+  background: rgba(15, 30, 45, 0.65);
+  border: 1px solid rgba(56,182,255,0.08);
+  border-radius: 16px;
+  margin-bottom: 20px;
+  box-shadow: var(--gc-neon-soft);
+}
+
+.gc-panel-stripe-test-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.gc-panel-stripe-test-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--gc-text-strong);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.gc-panel-stripe-test-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.gc-panel-stripe-test-btn {
+  padding: 8px 16px;
+  background: rgba(15, 30, 45, 0.5);
+  border: 1px solid rgba(56,182,255,0.08);
+  border-radius: 16px;
+  color: var(--gc-text);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.gc-panel-stripe-test-btn:hover:not(:disabled) {
+  background: rgba(15, 30, 45, 0.65);
+  border-color: rgba(56,182,255,0.12);
+  box-shadow: var(--gc-neon-soft);
+}
+
+.gc-panel-stripe-test-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.gc-panel-stripe-test-unavailable {
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--gc-text-muted);
+  background: rgba(15, 30, 45, 0.5);
+  border: 1px solid rgba(56,182,255,0.08);
+  border-radius: 16px;
+  font-weight: 600;
+}
+
+.gc-panel-stripe-test-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.gc-panel-stripe-test-section {
+  padding: 16px;
+  background: rgba(15, 30, 45, 0.5);
+  border: 1px solid rgba(56,182,255,0.08);
+  border-radius: 16px;
+}
+
+.gc-panel-stripe-test-section-full {
+  grid-column: 1 / -1;
+}
+
+.gc-panel-stripe-test-section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.gc-panel-stripe-test-section-title span {
+  font-size: 16px;
+}
+
+.gc-panel-stripe-test-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.gc-panel-stripe-test-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+  gap: 12px;
+}
+
+.gc-panel-stripe-test-item-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 600;
+  flex: 1;
+  min-width: 0;
+}
+
+.gc-panel-stripe-test-icon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.gc-panel-stripe-test-icon svg {
+  color: var(--text-muted);
+}
+
+.gc-icon-success svg {
+  color: #22c55e;
+}
+
+.gc-icon-error svg {
+  color: #ef4444;
+}
+
+.gc-icon-warning svg {
+  color: #f59e0b;
+}
+
+.gc-panel-stripe-test-item-value {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-main);
+  text-align: right;
+  flex-shrink: 0;
+  max-width: 50%;
+  word-break: break-word;
+}
+
+.gc-value-success {
+  color: #22c55e;
+}
+
+.gc-value-error {
+  color: #ef4444;
+}
+
+.gc-value-warning {
+  color: #f59e0b;
+}
+
+.gc-value-muted {
+  color: var(--text-muted);
+}
+
+.gc-panel-stripe-test-code {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-family: "Courier New", monospace;
+  font-size: 11px;
+  word-break: break-all;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.gc-panel-stripe-test-empty {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.gc-panel-stripe-test-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.gc-panel-stripe-test-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+}
+
+.gc-panel-stripe-test-stat-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.gc-panel-stripe-test-stat-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+
+

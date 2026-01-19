@@ -1,0 +1,247 @@
+/* src/pages/Cronograma/style.css */
+
+.gc-cronograma-config {
+  margin-bottom: 20px;
+}
+
+.gc-config-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.gc-config-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.gc-config-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gc-text-strong);
+}
+
+.gc-config-item-full {
+  margin-top: 16px;
+  margin-bottom: 20px;
+}
+
+.gc-dias-semana {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.gc-dia-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--gc-text);
+  cursor: pointer;
+  padding: 6px 12px;
+  border: var(--gc-card-border);
+  background: var(--gc-card-bg);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.gc-dia-checkbox:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.gc-dia-checkbox input[type="checkbox"] {
+  cursor: pointer;
+}
+
+.gc-dia-checkbox input[type="checkbox"]:checked + span,
+.gc-dia-checkbox:has(input[type="checkbox"]:checked) {
+  background: rgba(56, 182, 255, 0.15);
+  border-color: rgba(56, 182, 255, 0.3);
+  color: var(--gc-primary);
+}
+
+.gc-btn-gerar {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.gc-cronograma-resultado {
+  margin-top: 20px;
+}
+
+.gc-cronograma-meta {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 24px;
+  padding: 16px;
+  background: var(--gc-card-bg);
+  border: var(--gc-card-border);
+  border-radius: 12px;
+  box-shadow: var(--gc-card-shadow);
+}
+
+.gc-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.gc-meta-label {
+  font-size: 12px;
+  color: var(--gc-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.gc-meta-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--gc-text-strong);
+  font-family: "SF Mono", "Monaco", "Inconsolata", "Fira Code", monospace;
+}
+
+.gc-cronograma-semanas {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.gc-semana-card {
+  border: var(--gc-card-border);
+  border-radius: 12px;
+  padding: 20px;
+  background: var(--gc-card-bg);
+  box-shadow: var(--gc-card-shadow);
+  backdrop-filter: blur(10px);
+}
+
+.gc-semana-header {
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.gc-semana-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--gc-text-strong);
+}
+
+.gc-semana-dias {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.gc-dia-card {
+  border: 1px solid rgba(56, 182, 255, 0.1);
+  border-radius: 8px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.gc-dia-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.gc-dia-data {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gc-text-strong);
+}
+
+.gc-dia-total {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--gc-text-muted);
+  font-family: "SF Mono", "Monaco", "Inconsolata", "Fira Code", monospace;
+}
+
+.gc-dia-blocos {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.gc-bloco {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid;
+  font-size: 12px;
+}
+
+.gc-bloco-estudo {
+  background: rgba(56, 182, 255, 0.1);
+  border-color: rgba(56, 182, 255, 0.3);
+}
+
+.gc-bloco-revisao {
+  background: rgba(139, 92, 246, 0.1);
+  border-color: rgba(139, 92, 246, 0.3);
+}
+
+.gc-bloco-tipo {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+  color: var(--gc-text-dim);
+}
+
+.gc-bloco-disciplina {
+  font-weight: 600;
+  color: var(--gc-text-strong);
+  margin-bottom: 4px;
+}
+
+.gc-bloco-duracao {
+  font-size: 11px;
+  color: var(--gc-text-muted);
+}
+
+.gc-bloco-origem {
+  font-size: 10px;
+  color: var(--gc-text-dim);
+  font-style: italic;
+  margin-top: 4px;
+}
+
+.gc-input {
+  padding: 10px 12px;
+  border: var(--gc-card-border);
+  border-radius: var(--gc-card-radius);
+  background: var(--gc-card-bg);
+  color: var(--gc-text);
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.gc-input:focus {
+  outline: none;
+  border-color: rgba(56, 182, 255, 0.5);
+  box-shadow: var(--gc-neon-soft);
+}
+
+.gc-input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+
+
+
+

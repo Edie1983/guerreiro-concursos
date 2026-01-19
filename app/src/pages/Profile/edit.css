@@ -1,0 +1,80 @@
+/* src/pages/Profile/edit.css */
+.gc-profile-edit-page {
+  min-height: 100vh;
+  background: transparent;
+  padding-bottom: 2rem;
+}
+
+.gc-profile-edit-card {
+  margin: 1rem;
+  padding: 1.5rem;
+}
+
+.gc-profile-edit-avatar-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gc-profile-edit-avatar-wrapper {
+  position: relative;
+}
+
+.gc-profile-edit-avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary, #6366f1);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.gc-profile-edit-avatar-hint {
+  font-size: 0.85rem;
+  color: var(--text-secondary, #a0a0a0);
+  text-align: center;
+  margin: 0;
+}
+
+.gc-profile-edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.gc-profile-edit-error {
+  color: #ef4444;
+  font-size: 0.85rem;
+  margin-top: -0.5rem;
+}
+
+.gc-profile-edit-hint {
+  font-size: 0.85rem;
+  color: var(--text-secondary, #a0a0a0);
+  margin: -0.5rem 0 0 0;
+}
+
+.gc-profile-edit-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.gc-profile-edit-actions .btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 120px;
+  justify-content: center;
+}
+
+
+
+
+
+

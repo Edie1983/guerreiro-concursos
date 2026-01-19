@@ -1,0 +1,76 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // ============================================
+    // Collection: editais
+    // ============================================
+    // Regras de segurança para editais por usuário
+    match /editais/{id} {
+      // CREATE: Permite criar apenas se o userId do documento for igual ao uid do usuário autenticado
+      allow create: if request.auth != null && request.resource.data.userId == request.auth.uid;
+      
+      // READ (get/list): Permite ler apenas se o documento pertencer ao usuário autenticado
+      allow read: if request.auth != null && resource.data.userId == request.auth.uid;
+      
+      // UPDATE: Permite atualizar apenas se o documento pertencer ao usuário autenticado
+      allow update: if request.auth != null && resource.data.userId == request.auth.uid;
+      
+      // DELETE: Permite deletar apenas se o documento pertencer ao usuário autenticado
+      allow delete: if request.auth != null && resource.data.userId == request.auth.uid;
+    }
+
+    // ============================================
+    // Collection: users
+    // ============================================
+    // Regras de segurança para dados do usuário
+    match /users/{uid} {
+      // READ: Permite ler apenas o próprio documento
+      allow read: if request.auth != null && request.auth.uid == uid;
+      
+      // CREATE: Permite criar apenas o próprio documento, com plan="free" e premiumUntil=null
+      allow create: if request.auth != null
+        && request.auth.uid == uid
+        && request.resource.data.uid == uid
+        && request.resource.data.plan == "free"
+        && request.resource.data.premiumUntil == null;
+      
+      // UPDATE: Permite atualizar APENAS email e updatedAt
+      // NÃO pode mudar: plan, premiumUntil, stripeCustomerId, stripeSubscriptionId, subscriptionStatus, uid, createdAt
+      // Esses campos só podem ser alterados por Cloud Functions (backend)
+      allow update: if request.auth != null
+        && request.auth.uid == uid
+        && request.resource.data.uid == resource.data.uid
+        && request.resource.data.plan == resource.data.plan
+        && (
+          // premiumUntil não mudou (ambos null ou ambos iguais)
+          (!("premiumUntil" in request.resource.data) && !("premiumUntil" in resource.data))
+          || (request.resource.data.premiumUntil == resource.data.premiumUntil)
+        )
+        && (
+          // stripeCustomerId não mudou
+          (!("stripeCustomerId" in request.resource.data) && !("stripeCustomerId" in resource.data))
+          || (request.resource.data.stripeCustomerId == resource.data.stripeCustomerId)
+        )
+        && (
+          // stripeSubscriptionId não mudou
+          (!("stripeSubscriptionId" in request.resource.data) && !("stripeSubscriptionId" in resource.data))
+          || (request.resource.data.stripeSubscriptionId == resource.data.stripeSubscriptionId)
+        )
+        && (
+          // subscriptionStatus não mudou
+          (!("subscriptionStatus" in request.resource.data) && !("subscriptionStatus" in resource.data))
+          || (request.resource.data.subscriptionStatus == resource.data.subscriptionStatus)
+        )
+        && (
+          // createdAt não mudou (ambos não existem ou ambos iguais)
+          (!("createdAt" in request.resource.data) && !("createdAt" in resource.data))
+          || (request.resource.data.createdAt == resource.data.createdAt)
+        )
+        && request.resource.data.diff(resource.data).changedKeys().hasOnly(["email", "updatedAt"]);
+      
+      // DELETE: Bloqueado (usuários não podem deletar próprios documentos)
+      allow delete: if false;
+    }
+  }
+}
+

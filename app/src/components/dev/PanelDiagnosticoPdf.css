@@ -1,0 +1,173 @@
+/* src/components/dev/PanelDiagnosticoPdf.css */
+/* Painel Visual de Diagnóstico do PDF (PASSO G - DEV-only) */
+
+.gc-panel-diagnostico {
+  padding: 20px;
+  background: rgba(25, 195, 255, 0.05);
+  border: 1px solid rgba(25, 195, 255, 0.2);
+  border-radius: 14px;
+}
+
+.gc-panel-diagnostico-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.gc-panel-diagnostico-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.gc-panel-diagnostico-status {
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.gc-status-ok {
+  background: rgba(34, 197, 94, 0.2);
+  color: #22c55e;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.gc-status-pdf_escaneado {
+  background: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.gc-status-erro_extracao {
+  background: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.gc-panel-diagnostico-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.gc-panel-diagnostico-section {
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+}
+
+.gc-panel-diagnostico-section-full {
+  grid-column: 1 / -1;
+}
+
+.gc-panel-diagnostico-section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.gc-panel-diagnostico-section-title span {
+  font-size: 16px;
+}
+
+.gc-panel-diagnostico-flags {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.gc-panel-diagnostico-flags-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.gc-panel-diagnostico-flag {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+}
+
+.gc-panel-diagnostico-flag-label {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.gc-panel-diagnostico-flag-value {
+  font-size: 13px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.gc-panel-diagnostico-flag-value.ok {
+  color: #22c55e;
+  background: rgba(34, 197, 94, 0.1);
+}
+
+.gc-panel-diagnostico-flag-value.warning {
+  color: #f59e0b;
+  background: rgba(245, 158, 11, 0.1);
+}
+
+.gc-panel-diagnostico-flag-value.error {
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.gc-panel-diagnostico-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.gc-panel-diagnostico-stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+}
+
+.gc-panel-diagnostico-stat-label {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.gc-panel-diagnostico-stat-value {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.gc-panel-diagnostico-stat-value.success {
+  color: #22c55e;
+}
+
+.gc-panel-diagnostico-stat-value.error {
+  color: #ef4444;
+}
+
+
+

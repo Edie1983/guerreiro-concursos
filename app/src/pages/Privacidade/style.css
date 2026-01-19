@@ -1,0 +1,50 @@
+.gc-legal-page {
+  min-height: 100vh;
+  background: transparent;
+}
+
+.gc-legal-card {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  background: var(--gc-card-bg);
+  border: var(--gc-card-border);
+  border-radius: var(--gc-card-radius);
+  box-shadow: var(--gc-card-shadow);
+  backdrop-filter: blur(10px);
+}
+
+.gc-legal-section {
+  margin-bottom: 2rem;
+}
+
+.gc-legal-section:last-of-type {
+  margin-bottom: 0;
+}
+
+.gc-legal-section-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--gc-text-strong);
+}
+
+.gc-legal-text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--gc-text);
+  margin: 0;
+}
+
+.gc-legal-footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.gc-legal-footer-text {
+  font-size: 0.85rem;
+  color: var(--gc-text-dim);
+  text-align: center;
+  margin: 0;
+}

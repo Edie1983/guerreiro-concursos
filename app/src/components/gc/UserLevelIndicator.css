@@ -1,0 +1,89 @@
+/* src/components/gc/UserLevelIndicator.css */
+.gc-user-level-indicator {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--gc-bg-card);
+  border-radius: 8px;
+  border: 1px solid var(--gc-border);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 120px;
+}
+
+.gc-user-level-indicator:hover {
+  background: var(--gc-bg-secondary);
+  border-color: var(--gc-accent);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gc-user-level-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.gc-user-level-nivel {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: var(--gc-accent);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.gc-user-level-nivel-text {
+  white-space: nowrap;
+}
+
+.gc-user-level-pontos {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: var(--gc-text-secondary);
+  font-size: 0.8rem;
+}
+
+.gc-user-level-pontos-text {
+  white-space: nowrap;
+}
+
+.gc-user-level-progresso {
+  width: 100%;
+  height: 4px;
+  background: var(--gc-bg-secondary);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.gc-user-level-progresso-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--gc-accent), var(--gc-accent-light));
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .gc-user-level-indicator {
+    min-width: 100px;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .gc-user-level-nivel-text {
+    font-size: 0.75rem;
+  }
+
+  .gc-user-level-pontos-text {
+    font-size: 0.7rem;
+  }
+}
+
+
+
+
+
+

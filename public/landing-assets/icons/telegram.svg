@@ -1,0 +1,13 @@
+<svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow-telegram" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <circle cx="12" cy="12" r="10" stroke="white" stroke-width="1.5" fill="none" filter="url(#glow-telegram)"/>
+  <path d="M8 12l3 1l1 4l2-6l6-3l-12 4z" stroke="white" stroke-width="1.5" stroke-linejoin="round" fill="none" filter="url(#glow-telegram)"/>
+</svg>

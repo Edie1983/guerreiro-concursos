@@ -1,0 +1,77 @@
+/* src/components/analytics/CardAnalytics.css */
+.gc-card-analytics {
+  background: var(--surface-dark, #1e1e2e);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.gc-card-analytics:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.gc-card-analytics-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: rgba(99, 102, 241, 0.1);
+  color: #6366f1;
+}
+
+.gc-card-free .gc-card-analytics-icon {
+  background: rgba(99, 102, 241, 0.1);
+  color: #6366f1;
+}
+
+.gc-card-premium .gc-card-analytics-icon {
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.2), rgba(245, 158, 11, 0.2));
+  color: #fbbf24;
+}
+
+.gc-card-analytics-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.gc-card-analytics-title {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.gc-card-analytics-value {
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.gc-card-premium .gc-card-analytics-value {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gc-card-analytics-subtitle {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 4px;
+}
+
+
+
+
+
+

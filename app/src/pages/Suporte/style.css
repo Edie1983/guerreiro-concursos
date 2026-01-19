@@ -1,0 +1,117 @@
+/* src/pages/Suporte/style.css */
+.gc-legal-page {
+  min-height: 100vh;
+  background: transparent;
+  padding: 18px;
+}
+
+.gc-support-card {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  padding: 2.5rem;
+}
+
+.gc-support-card:last-child {
+  margin-bottom: 0;
+}
+
+.gc-support-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--gc-text-strong);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.gc-support-contact-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.gc-support-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--gc-card-bg);
+  border: var(--gc-card-border);
+  border-radius: var(--gc-card-radius);
+}
+
+.gc-support-contact-item svg {
+  color: var(--gc-primary);
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+.gc-support-contact-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--gc-text-muted);
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.gc-support-contact-value {
+  font-size: 1.1rem;
+  color: var(--gc-text-strong);
+  font-weight: 600;
+}
+
+.gc-support-faq {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.gc-support-faq-item {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.gc-support-faq-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.gc-support-faq-question {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--gc-text-strong);
+  margin-bottom: 0.75rem;
+}
+
+.gc-support-faq-answer {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--gc-text);
+}
+
+.gc-support-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.gc-support-link-btn {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  color: var(--gc-text);
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: left;
+  font-weight: 600;
+}
+
+.gc-support-link-btn:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(56, 182, 255, 0.3);
+  box-shadow: var(--gc-neon-soft);
+}

@@ -1,0 +1,211 @@
+/* src/pages/Flashcards/estudar.css */
+.flashcards-study-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px;
+  min-height: calc(100vh - 80px);
+}
+
+.flashcards-teaser-banner {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 16px 20px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.flashcards-teaser-banner p {
+  margin: 0;
+  flex: 1;
+}
+
+.flashcards-upgrade-btn-small {
+  background: white;
+  color: #667eea;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.flashcards-upgrade-btn-small:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.flashcards-study-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.flashcards-close-btn {
+  background: rgba(0, 0, 0, 0.05);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+
+.flashcards-close-btn:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.flashcards-progress {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.flashcards-progress-bar {
+  flex: 1;
+  height: 8px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.flashcards-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  transition: width 0.3s;
+}
+
+.flashcards-progress-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary, #666);
+  min-width: 60px;
+  text-align: right;
+}
+
+.flashcards-study-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.flashcards-actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.flashcards-action-btn-error,
+.flashcards-action-btn-success,
+.flashcards-action-btn-easy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.flashcards-action-btn-error {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.flashcards-action-btn-error:hover {
+  background: #fecaca;
+  transform: translateY(-2px);
+}
+
+.flashcards-action-btn-success {
+  background: #d1fae5;
+  color: #059669;
+}
+
+.flashcards-action-btn-success:hover {
+  background: #a7f3d0;
+  transform: translateY(-2px);
+}
+
+.flashcards-action-btn-easy {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.flashcards-action-btn-easy:hover {
+  background: #bfdbfe;
+  transform: translateY(-2px);
+}
+
+.flashcards-session-complete {
+  text-align: center;
+  padding: 64px 24px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.flashcards-session-complete svg {
+  color: #059669;
+  margin-bottom: 24px;
+}
+
+.flashcards-session-complete h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--text-primary, #1a1a1a);
+}
+
+.flashcards-session-complete p {
+  font-size: 16px;
+  color: var(--text-secondary, #666);
+  margin-bottom: 8px;
+}
+
+.flashcards-bonus {
+  color: #059669;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+  .flashcards-study-container {
+    padding: 16px;
+  }
+
+  .flashcards-teaser-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .flashcards-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .flashcards-action-btn-error,
+  .flashcards-action-btn-success,
+  .flashcards-action-btn-easy {
+    width: 100%;
+  }
+}
+
+
+
+
+
+

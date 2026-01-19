@@ -1,0 +1,256 @@
+/* src/components/gc/GcUxGate.css */
+/* Estilos para Modais e Banners de UX (PASSO I) */
+
+/* Overlay do Modal */
+.gc-ux-gate-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+/* Modal */
+.gc-ux-gate-modal {
+  background: var(--gc-card-bg);
+  border-radius: var(--gc-card-radius);
+  max-width: 500px;
+  width: 100%;
+  box-shadow: var(--gc-card-shadow);
+  border: var(--gc-card-border);
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.gc-ux-gate-modal-header {
+  padding: 24px 24px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.gc-ux-gate-modal-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.gc-ux-gate-modal-icon-alta {
+  color: #ef4444;
+}
+
+.gc-ux-gate-modal-icon-media {
+  color: #f59e0b;
+}
+
+.gc-ux-gate-modal-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-main);
+  flex: 1;
+}
+
+.gc-ux-gate-modal-body {
+  padding: 20px 24px;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.gc-ux-gate-modal-message {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-main);
+  white-space: pre-line;
+  margin-bottom: 16px;
+}
+
+.gc-ux-gate-modal-other-alerts {
+  margin-top: 16px;
+  padding: 12px;
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  border-radius: 8px;
+}
+
+.gc-ux-gate-modal-other-alerts-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #f59e0b;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.gc-ux-gate-modal-other-alert-item {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-main);
+  margin-bottom: 6px;
+}
+
+.gc-ux-gate-modal-other-alert-item:last-child {
+  margin-bottom: 0;
+}
+
+.gc-ux-gate-modal-other-alert-item strong {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.gc-ux-gate-modal-tips {
+  margin-top: 16px;
+  padding: 12px;
+  background: rgba(25, 195, 255, 0.1);
+  border: 1px solid rgba(25, 195, 255, 0.2);
+  border-radius: 8px;
+}
+
+.gc-ux-gate-modal-tips-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.gc-ux-gate-modal-tips-list {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-main);
+}
+
+.gc-ux-gate-modal-tips-list li {
+  margin-bottom: 4px;
+}
+
+.gc-ux-gate-modal-actions {
+  padding: 16px 24px 24px;
+  display: flex;
+  gap: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.gc-ux-gate-modal-btn {
+  flex: 1;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.gc-ux-gate-modal-btn-primary {
+  background: var(--accent);
+  color: #00131b;
+}
+
+.gc-ux-gate-modal-btn-primary:hover {
+  filter: brightness(1.15);
+  box-shadow: 0 0 20px rgba(25, 195, 255, 0.4);
+}
+
+.gc-ux-gate-modal-btn-secondary {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-main);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gc-ux-gate-modal-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* PASSO V: Estilos para botões desabilitados */
+.gc-ux-gate-modal-btn:disabled,
+.gc-ux-gate-banner-close:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Banner (mode INFO) */
+.gc-ux-gate-banner {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9998;
+  max-width: 600px;
+  width: calc(100% - 40px);
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.gc-ux-gate-banner-content {
+  background: var(--gc-card-bg);
+  border: var(--gc-card-border);
+  border-radius: var(--gc-card-radius);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: var(--gc-card-shadow);
+  backdrop-filter: blur(10px);
+}
+
+.gc-ux-gate-banner-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.gc-ux-gate-banner-text {
+  flex: 1;
+}
+
+.gc-ux-gate-banner-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 4px;
+}
+
+.gc-ux-gate-banner-message {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.gc-ux-gate-banner-close {
+  padding: 8px 16px;
+  background: var(--accent);
+  color: #00131b;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.gc-ux-gate-banner-close:hover {
+  filter: brightness(1.15);
+  box-shadow: 0 0 15px rgba(25, 195, 255, 0.4);
+}
+

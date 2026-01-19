@@ -1,0 +1,233 @@
+/* src/components/dev/PanelTelemetryGc.css */
+/* Painel Visual de Telemetria GC (PASSO X - DEV-only) */
+
+.gc-panel-telemetry {
+  padding: 20px;
+  background: rgba(139, 92, 246, 0.05);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 14px;
+}
+
+.gc-panel-telemetry-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.gc-panel-telemetry-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.gc-panel-telemetry-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.gc-panel-telemetry-btn {
+  padding: 8px 16px;
+  background: rgba(139, 92, 246, 0.15);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  border-radius: 8px;
+  color: var(--text-main);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.gc-panel-telemetry-btn:hover {
+  background: rgba(139, 92, 246, 0.25);
+  border-color: rgba(139, 92, 246, 0.5);
+}
+
+.gc-panel-telemetry-btn-danger {
+  background: rgba(239, 68, 68, 0.15);
+  border-color: rgba(239, 68, 68, 0.3);
+  color: #ef4444;
+}
+
+.gc-panel-telemetry-btn-danger:hover {
+  background: rgba(239, 68, 68, 0.25);
+  border-color: rgba(239, 68, 68, 0.5);
+}
+
+.gc-panel-telemetry-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.gc-panel-telemetry-unavailable {
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #f59e0b;
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.gc-panel-telemetry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.gc-panel-telemetry-section {
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+}
+
+.gc-panel-telemetry-section-full {
+  grid-column: 1 / -1;
+}
+
+.gc-panel-telemetry-section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.gc-panel-telemetry-section-title span {
+  font-size: 16px;
+}
+
+.gc-panel-telemetry-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.gc-panel-telemetry-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+}
+
+.gc-panel-telemetry-stat-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.gc-panel-telemetry-stat-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.gc-panel-telemetry-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.gc-panel-telemetry-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+}
+
+.gc-panel-telemetry-item-label {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.gc-panel-telemetry-rank {
+  display: inline-block;
+  padding: 2px 6px;
+  background: rgba(139, 92, 246, 0.2);
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(139, 92, 246, 1);
+}
+
+.gc-panel-telemetry-item-value {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.gc-severity-alta {
+  color: #ef4444;
+}
+
+.gc-severity-media {
+  color: #f59e0b;
+}
+
+.gc-severity-baixa {
+  color: #22c55e;
+}
+
+.gc-panel-telemetry-empty {
+  padding: 16px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.gc-panel-telemetry-details {
+  margin-top: 8px;
+}
+
+.gc-panel-telemetry-summary {
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-main);
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s;
+}
+
+.gc-panel-telemetry-summary:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.gc-panel-telemetry-pre {
+  margin-top: 8px;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  font-size: 11px;
+  font-family: "Courier New", monospace;
+  color: var(--text-main);
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+

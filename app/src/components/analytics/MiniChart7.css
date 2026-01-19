@@ -1,0 +1,74 @@
+/* src/components/analytics/MiniChart7.css */
+.gc-mini-chart-7 {
+  background: var(--surface-dark, #1e1e2e);
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.gc-mini-chart-header {
+  margin-bottom: 20px;
+}
+
+.gc-mini-chart-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.gc-mini-chart-bars {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 8px;
+  height: 120px;
+}
+
+.gc-mini-chart-bar-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.gc-mini-chart-bar-container {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.gc-mini-chart-bar {
+  width: 100%;
+  max-width: 32px;
+  background: linear-gradient(180deg, #6366f1, #4f46e5);
+  border-radius: 4px 4px 0 0;
+  transition: height 0.3s ease, opacity 0.3s ease;
+  min-height: 4px;
+}
+
+.gc-mini-chart-label {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+.gc-mini-chart-value {
+  font-size: 10px;
+  color: #6366f1;
+  font-weight: 600;
+  margin-top: -4px;
+}
+
+
+
+
+
+

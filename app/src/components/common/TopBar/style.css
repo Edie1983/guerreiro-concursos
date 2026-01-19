@@ -1,0 +1,72 @@
+/* src/components/common/TopBar/style.css */
+.gc-topbar-menu-wrapper {
+  position: relative;
+}
+
+.gc-topbar-avatar-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.gc-topbar-avatar-btn:hover {
+  transform: scale(1.05);
+}
+
+.gc-topbar-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--primary, #6366f1);
+}
+
+.gc-topbar-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: var(--bg-surface-dark, #1a1a1a);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  min-width: 200px;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.gc-topbar-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: none;
+  border: none;
+  color: var(--text-primary, #ffffff);
+  font-size: 0.9rem;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.gc-topbar-menu-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.gc-topbar-menu-item-danger {
+  color: #ef4444;
+}
+
+.gc-topbar-menu-item-danger:hover {
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.gc-topbar-menu-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 0.5rem 0;
+}
