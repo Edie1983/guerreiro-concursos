@@ -39,6 +39,26 @@ body {
 
 /* ====== HERO ====== */
 .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 40px 20px; }
+.hero-content { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.hero-verse { max-width: 760px; margin-bottom: 10px; }
+.hero-verse-quote {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1.05rem, 3vw, 1.35rem);
+  line-height: 1.5;
+  color: #e2e8f0;
+  text-shadow: 0 0 16px rgba(124, 58, 237, 0.5), 0 0 28px rgba(79, 70, 229, 0.35);
+  letter-spacing: 0.02em;
+  margin: 0 0 8px 0;
+}
+.hero-verse-ref { display: inline-block; margin-top: 6px; color: #cbd5e1; font-style: normal; font-weight: 700; }
+.hero-verse-call {
+  margin: 0;
+  font-weight: 900;
+  font-size: clamp(1.1rem, 3.2vw, 1.5rem);
+  letter-spacing: 0.04em;
+  color: #fff;
+  text-shadow: 0 0 18px rgba(124, 58, 237, 0.6);
+}
 .hero-logo { width: 220px; margin-bottom: 30px; }
 .headline { font-size: clamp(2.5rem, 8vw, 4.5rem); font-weight: 900; line-height: 1; margin: 0 0 20px 0; text-transform: uppercase; }
 .neon-text { text-shadow: 0 0 15px rgba(139, 92, 246, 0.8), 0 0 30px rgba(139, 92, 246, 0.4); }
